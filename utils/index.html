@@ -60,7 +60,7 @@
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../build/assets/Documenter.css">
+      <link rel="stylesheet" href="../assets/Documenter.css">
     
     
   </head>
@@ -96,7 +96,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#other-functionality" tabindex="1" class="md-skip">
+      <a href="#utilities" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -318,6 +318,19 @@
     Config
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" title="Notes:" class="md-nav__link">
+    Notes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -329,8 +342,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#note" title="NOTE:" class="md-nav__link">
-    NOTE:
+  <a href="#notes_1" title="Notes:" class="md-nav__link">
+    Notes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attn" title="ATTN:" class="md-nav__link">
+    ATTN:
   </a>
   
 </li>
@@ -344,6 +364,19 @@
   <a href="#record-id" title="Record ID" class="md-nav__link">
     Record ID
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes_2" title="Notes:" class="md-nav__link">
+    Notes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -395,6 +428,19 @@
     Config
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" title="Notes:" class="md-nav__link">
+    Notes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -406,8 +452,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#note" title="NOTE:" class="md-nav__link">
-    NOTE:
+  <a href="#notes_1" title="Notes:" class="md-nav__link">
+    Notes:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attn" title="ATTN:" class="md-nav__link">
+    ATTN:
   </a>
   
 </li>
@@ -421,6 +474,19 @@
   <a href="#record-id" title="Record ID" class="md-nav__link">
     Record ID
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes_2" title="Notes:" class="md-nav__link">
+    Notes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -443,53 +509,31 @@
                   <a href="https://github.com/bcbi/REDCap.jl/edit/master/docs/utils.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <p><a id='Other-Functionality-1'></a></p>
-<h1 id="other-functionality">Other Functionality</h1>
+                <p><a id='Utilities-1'></a></p>
+<h1 id="utilities">Utilities</h1>
 <p><a id='Config-1'></a></p>
 <h2 id="config">Config</h2>
 <pre><code>REDCap.Config(url::String, key::String; ssl::Bool = true)
 </code></pre>
 
+<p><a id='Notes:-1'></a></p>
+<h4 id="notes">Notes:</h4>
 <p>All REDCap projects need to be tied to their url and API Key, which is done by creating a REDCap.Config object</p>
 <pre><code class="julia">config = REDCap.Config(&quot;&lt;url&gt;&quot;, &quot;&lt;32-digit_API_key&gt;&quot;)
 </code></pre>
 
-<p>For certain projects, SSL Verifification may need to be disabled. The config object can be set-up without ssl verification as so:</p>
+<p>For certain projects, SSL Verification may need to be disabled. The config object can be set-up without ssl verification as so:</p>
 <pre><code class="julia">config = REDCap.Config(&quot;&lt;url&gt;&quot;, &quot;&lt;32-digit_API_key&gt;&quot;, ssl=false)
 </code></pre>
 
 <p>SSL verification should only be disabled in circumstances where a REDCap API cannot be SSL secured, but must still be accessed. The ssl setting will default to true.</p>
 <p><a id='Project-Creation-1'></a></p>
 <h2 id="project-creation">Project Creation</h2>
-<p><a id='REDCap.create_project-Tuple{REDCap.Config,String,Integer}' href='#REDCap.create_project-Tuple{REDCap.Config,String,Integer}'>#</a>
-<strong><code>REDCap.create_project</code></strong> &mdash; <em>Method</em>.</p>
-<pre><code>create_project(config::REDCap.Config, project_title::String, purpose::Integer; format::String=&quot;json&quot;,
-                    returnFormat::String=&quot;json&quot;, odm=&quot;&quot;, purpose_other::String=&quot;&quot;, project_notes::String=&quot;&quot;, 
-                    is_longitudinal::Integer=0, surveys_enabled::Integer=0, record_autonumbering_enabled::Integer=1)
+<pre><code>create_project(config::REDCap.Config, project_title::String, purpose::Integer; format::String=&quot;json&quot;, returnFormat::String=&quot;json&quot;, odm=&quot;&quot;, purpose_other::String=&quot;&quot;, project_notes::String=&quot;&quot;, is_longitudinal::Integer=0, surveys_enabled::Integer=0, record_autonumbering_enabled::Integer=1)
 </code></pre>
 
-<p>Creates a project with the given parameters</p>
-<p><strong>Parameters:</strong></p>
-<ul>
-<li><code>config</code> - Struct containing url and super-api-key</li>
-<li><code>format</code> - "json", "xml", "csv", or "odm". declares format of imported data</li>
-<li><code>data</code> - Attributes of project to create- only project_title and purpose are required (* for default)</li>
-</ul>
-<pre><code>* `project_title`: Title
-* `purpose`: Must be numerical (0 - test, 1 - other, 2 - research, 3 - Qual+, 4 - OpSupport)
-* `purpose_other`: If purpose == 1, string of purpose
-* `project_notes`: Notes
-* `is_longitudinal`: 0 - false*, 1 - true
-* `surveys_enabled`: 0 - false*, 1 - true
-* `record_autonumbering_enabled`: 0 - false, 1 - true*
-</code></pre>
-
-<ul>
-<li><code>returnFormat</code> - Error message format</li>
-<li><code>odm</code> - XML string containing metadata</li>
-</ul>
-<p><strong>Returns:</strong></p>
-<p>The standard config for that project.</p>
+<p><a id='Notes:-2'></a></p>
+<h4 id="notes_1">Notes:</h4>
 <p>Projects can be created by first constructing a superConfig object, and initializing a project with desired settings. The function returns the config object for the new project.</p>
 <pre><code class="julia">superconfig = REDCap.Config(&quot;&lt;url&gt;&quot;, &quot;&lt;64-digit_superAPI_key&gt;&quot;)
 
@@ -497,16 +541,18 @@
 config = create_project(superconfig, &quot;&lt;New Project Name&gt;&quot;, 0) #0 indicates a test project
 </code></pre>
 
-<p>Any new calls to this project can now be made using the returned config object. </p>
-<p><a id='NOTE:-1'></a></p>
-<h4 id="note">NOTE:</h4>
+<p>Any new calls to this project can now be made using the returned config object.</p>
+<p><a id='ATTN:-1'></a></p>
+<h4 id="attn">ATTN:</h4>
 <p>There is currently no available way to delete a project through the API. Under most circumstances, only your REDCap system administrator can delete a project.</p>
 <p><a id='Record-ID-1'></a></p>
 <h2 id="record-id">Record ID</h2>
-<p>It may be necessary for some projects to retreive the next available record ID. This can be done using <code>generate_next_record_id()</code>. </p>
+<p>It may be necessary for some projects to retrieve the next available record ID. This can be done using <code>generate_next_record_id()</code>.</p>
 <pre><code class="julia">generate_next_record_id(config)
 </code></pre>
 
+<p><a id='Notes:-3'></a></p>
+<h4 id="notes_2">Notes:</h4>
 <p>From the REDCap Documentation:</p>
 <blockquote>
 <p>If using Data Access Groups (DAGs) in the project, this method accounts for the special formatting of the record name for users in DAGs (e.g., DAG-ID); in this case, it only assigns the next value for ID for all numbers inside a DAG. For example, if a DAG has a corresponding DAG number of 223 wherein records 223-1 and 223-2 already exist, then the next record will be 223-3 if the API user belongs to the DAG that has DAG number 223. (The DAG number is auto-assigned by REDCap for each DAG when the DAG is first created.) When generating a new record name in a DAG, the method considers all records in the entire project when determining the maximum record ID, including those that might have been originally created in that DAG but then later reassigned to another DAG.</p>

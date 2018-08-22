@@ -60,7 +60,7 @@
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="../build/assets/Documenter.css">
+      <link rel="stylesheet" href="../assets/Documenter.css">
     
     
   </head>
@@ -339,20 +339,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#changing-settings" title="Changing Settings" class="md-nav__link">
-    Changing Settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-examples" title="Other Examples" class="md-nav__link">
-    Other Examples
-  </a>
-  
-</li>
-      
       
       
       
@@ -394,20 +380,6 @@
         <li class="md-nav__item">
   <a href="#file-handling" title="File Handling" class="md-nav__link">
     File Handling
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#changing-settings" title="Changing Settings" class="md-nav__link">
-    Changing Settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-examples" title="Other Examples" class="md-nav__link">
-    Other Examples
   </a>
   
 </li>
@@ -487,7 +459,7 @@ export_pdf(config, &quot;/&lt;path&gt;/export.pdf&quot;, allRecords=true)
 
 <p><a id='File-Handling-1'></a></p>
 <h2 id="file-handling">File Handling</h2>
-<p>Records and other project information can be loaded directly from a <code>.csv</code>, <code>.xml</code>, or <code>.odm</code>. Likewise, exported information can be saved directly to a specified file. </p>
+<p>Records and other project information can be loaded directly from a <code>.csv</code>, <code>.xml</code>, or <code>.odm</code>. Likewise, exported information can be saved directly to a specified file.</p>
 <pre><code class="julia">#Exporting - file_loc must be provided as the save path
 export_records(config, file_loc=&quot;&lt;path&gt;/records.xml&quot;, format=&quot;xml&quot;)
 
@@ -498,16 +470,6 @@ import_records(config, &quot;&lt;path&gt;/records.xml&quot;, format=&quot;xml&qu
 
 import_users(config, &quot;&lt;path&gt;/users.csv&quot;, format=&quot;csv&quot;)
 </code></pre>
-
-<p><a id='Changing-Settings-1'></a></p>
-<h2 id="changing-settings">Changing Settings</h2>
-<p>Export/Import modified settings like users and project info, as well as records</p>
-<pre><code class="julia">
-</code></pre>
-
-<p><a id='Other-Examples-1'></a></p>
-<h2 id="other-examples">Other Examples</h2>
-<p>Arms/Events? Report generation?</p>
                 
                   
                 

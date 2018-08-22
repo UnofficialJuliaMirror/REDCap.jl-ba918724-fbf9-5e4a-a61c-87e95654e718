@@ -60,7 +60,7 @@
     
     <link rel="stylesheet" href="./assets/fonts/material-icons.css">
     
-      <link rel="stylesheet" href="./build/assets/Documenter.css">
+      <link rel="stylesheet" href="./assets/Documenter.css">
     
     
   </head>
@@ -411,7 +411,7 @@
 <li><a href=".#Index-1">Index</a></li>
 </ul>
 </li>
-<li><a href="export/#Exporting-1">Exporting</a><ul>
+<li><a href="export/#Export-1">Export</a><ul>
 <li><a href="export/#Records-1">Records</a></li>
 <li><a href="export/#Project-Info-1">Project Info</a></li>
 <li><a href="export/#Users-1">Users</a></li>
@@ -422,7 +422,7 @@
 <li><a href="export/#Instrument-Event-Mappings-1">Instrument Event Mappings</a></li>
 </ul>
 </li>
-<li><a href="import/#Importing-1">Importing</a><ul>
+<li><a href="import/#Import-1">Import</a><ul>
 <li><a href="import/#Records-1">Records</a></li>
 <li><a href="import/#Project-Info-1">Project Info</a></li>
 <li><a href="import/#Metadata-1">Metadata</a></li>
@@ -433,14 +433,14 @@
 <li><a href="import/#Instrument-Event-Mappings-1">Instrument Event Mappings</a></li>
 </ul>
 </li>
-<li><a href="delete/#Deleting-1">Deleting</a><ul>
+<li><a href="delete/#Deletion-1">Deletion</a><ul>
 <li><a href="delete/#Records-1">Records</a></li>
 <li><a href="delete/#Files-1">Files</a></li>
 <li><a href="delete/#Arms-1">Arms</a></li>
 <li><a href="delete/#Events-1">Events</a></li>
 </ul>
 </li>
-<li><a href="utils/#Other-Functionality-1">Other Functionality</a><ul>
+<li><a href="utils/#Utilities-1">Utilities</a><ul>
 <li><a href="utils/#Config-1">Config</a></li>
 <li><a href="utils/#Project-Creation-1">Project Creation</a></li>
 <li><a href="utils/#Record-ID-1">Record ID</a></li>
@@ -449,19 +449,16 @@
 <li><a href="examples/#Examples-1">Examples</a><ul>
 <li><a href="examples/#Basic-Usage-1">Basic Usage</a></li>
 <li><a href="examples/#File-Handling-1">File Handling</a></li>
-<li><a href="examples/#Changing-Settings-1">Changing Settings</a></li>
-<li><a href="examples/#Other-Examples-1">Other Examples</a></li>
 </ul>
 </li>
 </ul>
 <p><a id='Overview-1'></a></p>
 <h2 id="overview">Overview</h2>
 <p>A Julia frontend for the REDCap API. REDCap.jl supports both importing and exporting records, as well as deletion from the REDCap Database. It also includes functions for surveys and report generation.</p>
-<p>This package is meant to be a straightforward wrapper for the REDCap API, and assumes familiarity with REDCap. Knowledge of the data expected by the instruments you are working in is required, as this package makes few assumptions on incoming data. </p>
+<p>This package is meant to be a straightforward wrapper for the REDCap API, and assumes familiarity with REDCap. Knowledge of the data expected by the instruments you are working in is required, as this package makes few assumptions on incoming data. Accessing a REDCap project is also entirely dependant on a correctly set-up Config object, so ensure the Config is properly set-up before automating anything in a project.</p>
 <p><a id='Index-1'></a></p>
 <h2 id="index">Index</h2>
 <ul>
-<li><a href="utils/#REDCap.create_project-Tuple{REDCap.Config,String,Integer}"><code>REDCap.create_project</code></a></li>
 <li><a href="delete/#REDCap.delete_arms-Tuple{REDCap.Config,Array}"><code>REDCap.delete_arms</code></a></li>
 <li><a href="delete/#REDCap.delete_events-Tuple{REDCap.Config,Array}"><code>REDCap.delete_events</code></a></li>
 <li><a href="delete/#REDCap.delete_file-Tuple{REDCap.Config,String,String,String}"><code>REDCap.delete_file</code></a></li>
@@ -473,14 +470,9 @@
 <li><a href="export/#REDCap.export_records-Tuple{REDCap.Config}"><code>REDCap.export_records</code></a></li>
 <li><a href="export/#REDCap.export_report-Tuple{REDCap.Config,Integer}"><code>REDCap.export_report</code></a></li>
 <li><a href="export/#REDCap.export_users-Tuple{REDCap.Config}"><code>REDCap.export_users</code></a></li>
-<li><a href="import/#REDCap.import_arms-Tuple{REDCap.Config,Any}"><code>REDCap.import_arms</code></a></li>
 <li><a href="import/#REDCap.import_events-Tuple{REDCap.Config,Any}"><code>REDCap.import_events</code></a></li>
-<li><a href="import/#REDCap.import_file-Tuple{REDCap.Config,String,String,String,String}"><code>REDCap.import_file</code></a></li>
-<li><a href="import/#REDCap.import_instrument_event_mappings-Tuple{REDCap.Config,Any}"><code>REDCap.import_instrument_event_mappings</code></a></li>
-<li><a href="import/#REDCap.import_metadata-Tuple{REDCap.Config,Any}"><code>REDCap.import_metadata</code></a></li>
 <li><a href="import/#REDCap.import_project_information-Tuple{REDCap.Config,Any}"><code>REDCap.import_project_information</code></a></li>
 <li><a href="import/#REDCap.import_records-Tuple{REDCap.Config,Any}"><code>REDCap.import_records</code></a></li>
-<li><a href="import/#REDCap.import_users-Tuple{REDCap.Config,Any}"><code>REDCap.import_users</code></a></li>
 </ul>
                 
                   

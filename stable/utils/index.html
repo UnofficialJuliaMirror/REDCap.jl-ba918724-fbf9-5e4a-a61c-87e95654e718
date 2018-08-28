@@ -529,9 +529,34 @@
 <p>SSL verification should only be disabled in circumstances where a REDCap API cannot be SSL secured, but must still be accessed. The ssl setting will default to true.</p>
 <p><a id='Project-Creation-1'></a></p>
 <h2 id="project-creation">Project Creation</h2>
+<p><a id='REDCap.create_project-Tuple{REDCap.Config,String,Integer}' href='#REDCap.create_project-Tuple{REDCap.Config,String,Integer}'>#</a>
+<strong><code>REDCap.create_project</code></strong> &mdash; <em>Method</em>.</p>
 <pre><code>create_project(config::REDCap.Config, project_title::String, purpose::Integer; format::String=&quot;json&quot;, returnFormat::String=&quot;json&quot;, odm=&quot;&quot;, purpose_other::String=&quot;&quot;, project_notes::String=&quot;&quot;, is_longitudinal::Integer=0, surveys_enabled::Integer=0, record_autonumbering_enabled::Integer=1)
 </code></pre>
 
+<p>Creates a project with the given parameters</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><code>config</code> - Struct containing url and super-api-key</li>
+<li><code>format</code> - "json", "xml", "csv", or "odm". declares format of imported data</li>
+<li><code>data</code> - Attributes of project to create- only project_title and purpose are required (* for default)</li>
+</ul>
+<pre><code>* `project_title`: Title
+* `purpose`: Must be numerical (0 - test, 1 - other, 2 - research, 3 - Qual+, 4 - OpSupport)
+* `purpose_other`: If purpose == 1, string of purpose
+* `project_notes`: Notes
+* `is_longitudinal`: 0 - false*, 1 - true
+* `surveys_enabled`: 0 - false*, 1 - true
+* `record_autonumbering_enabled`: 0 - false, 1 - true*
+</code></pre>
+
+<ul>
+<li><code>returnFormat</code> - Error message format</li>
+<li><code>odm</code> - XML string containing metadata</li>
+</ul>
+<p><strong>Returns:</strong></p>
+<p>The standard config for that project.</p>
+<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/aedf31c282bce67946c04cb294ec51969ba3bcc3/src/Import.jl#L251-L272' class='documenter-source'>source</a><br></p>
 <p><a id='Notes:-2'></a></p>
 <h4 id="notes_1">Notes:</h4>
 <p>Projects can be created by first constructing a superConfig object, and initializing a project with desired settings. The function returns the config object for the new project.</p>

@@ -787,7 +787,7 @@
 </ul>
 <p><strong>Returns:</strong></p>
 <p>An array of Dictionaries containing record information</p>
-<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/13abd9ae9163bd082d712371437d26116061f288/src/Export.jl#L207-L229' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/075b3669758704df90b15e0618e5904053ed3c7e/src/Export.jl#L207-L229' class='documenter-source'>source</a><br></p>
 <p><a id='Notes:-1'></a></p>
 <h4 id="notes">Notes:</h4>
 <p>Exported records can be returned normally, or written to a file. Records can be exported by their record ID, by specified fields, or even using a boolean logic string such as <code>[age]&gt;80</code></p>
@@ -886,7 +886,7 @@ export_pdf(config, &quot;&lt;file-path&gt;&quot;, record=&quot;1&quot;, event=&q
 </ul>
 <p><strong>Returns:</strong></p>
 <p>Formatted dict of report.</p>
-<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/13abd9ae9163bd082d712371437d26116061f288/src/Export.jl#L331-L346' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/075b3669758704df90b15e0618e5904053ed3c7e/src/Export.jl#L331-L346' class='documenter-source'>source</a><br></p>
 <p><a id='Notes:-2'></a></p>
 <h4 id="notes_1">Notes:</h4>
 <p>Reports can also be exported using the generated ID given on the REDCap dashboard.</p>
@@ -922,7 +922,7 @@ export_pdf(config, &quot;&lt;file-path&gt;&quot;, record=&quot;1&quot;, event=&q
 </ul>
 <p><strong>Returns:</strong></p>
 <p>Array of formatted dicts of users for project.</p>
-<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/13abd9ae9163bd082d712371437d26116061f288/src/Export.jl#L72-L83' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/075b3669758704df90b15e0618e5904053ed3c7e/src/Export.jl#L72-L83' class='documenter-source'>source</a><br></p>
 <p><a id='Notes:-3'></a></p>
 <h4 id="notes_2">Notes:</h4>
 <p>A full list of users can be exported and viewed/modified using the <code>export_users()</code> function. User Rights can be modified (by a user with appropriate rights) using this method. - See Section on Imports</p>
@@ -969,7 +969,7 @@ list = export_survey_participant_list(config, &quot;demographics&quot;, &quot;ev
 </ul>
 <p><strong>Returns:</strong></p>
 <p>Formatted dict of Arms for project.</p>
-<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/13abd9ae9163bd082d712371437d26116061f288/src/Export.jl#L106-L122' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/075b3669758704df90b15e0618e5904053ed3c7e/src/Export.jl#L106-L122' class='documenter-source'>source</a><br></p>
 <p><a id='Notes:-4'></a></p>
 <h4 id="notes_3">Notes:</h4>
 <p>The metadata of a projects arms can be exported with <code>export_arms(config)</code>, which by default returns a dictionary containing both the name and number of an arm. Only select arms may be exported by passing an array of arm numbers.</p>
@@ -995,7 +995,7 @@ list = export_survey_participant_list(config, &quot;demographics&quot;, &quot;ev
 </ul>
 <p><strong>Returns:</strong></p>
 <p>Formatted dict of events for project.</p>
-<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/13abd9ae9163bd082d712371437d26116061f288/src/Export.jl#L128-L142' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/075b3669758704df90b15e0618e5904053ed3c7e/src/Export.jl#L128-L142' class='documenter-source'>source</a><br></p>
 <p><a id='Notes:-5'></a></p>
 <h4 id="notes_4">Notes:</h4>
 <p>An array of events is returned, along with the events information.</p>
@@ -1017,7 +1017,7 @@ list = export_survey_participant_list(config, &quot;demographics&quot;, &quot;ev
 </ul>
 <p><strong>Returns:</strong></p>
 <p>Formatted dict for data collection instruments of project.</p>
-<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/13abd9ae9163bd082d712371437d26116061f288/src/Export.jl#L20-L30' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/075b3669758704df90b15e0618e5904053ed3c7e/src/Export.jl#L20-L30' class='documenter-source'>source</a><br></p>
 <p><a id='Notes:-6'></a></p>
 <h4 id="notes_5">Notes:</h4>
 <p>Instrument information may also be exported using <code>export_instruments(config)</code>. By default this returns a dictionary of the instrument label and the instruments variable name (which is often different from the label and is needed to access instruments via the API).</p>
@@ -1042,7 +1042,7 @@ list = export_survey_participant_list(config, &quot;demographics&quot;, &quot;ev
 </ul>
 <p><strong>Returns:</strong></p>
 <p>Formatted dict of instrument-event mappings for project.</p>
-<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/13abd9ae9163bd082d712371437d26116061f288/src/Export.jl#L272-L286' class='documenter-source'>source</a><br></p>
+<p><a target='_blank' href='https://github.com/bcbi/REDCap.jl/blob/075b3669758704df90b15e0618e5904053ed3c7e/src/Export.jl#L272-L286' class='documenter-source'>source</a><br></p>
 <p><a id='Notes:-7'></a></p>
 <h4 id="notes_6">Notes:</h4>
 <p>The mappings between events and instruments may be exported using <code>export_instrument_event_mappings()</code></p>
